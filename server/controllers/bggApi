@@ -1,0 +1,6 @@
+const express = require ('express');
+
+const bggApi = (req, res, next) => {
+    //make api request to bgg
+    //
+}
