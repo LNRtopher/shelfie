@@ -21,7 +21,7 @@ const gameSchema = new Schema({
 
 const Game = mongoose.model('game', gameSchema);
 
-module.exports = {Game};
+module.exports = Game;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 // const client = new MongoClient(uri, {
 //   serverApi: {
