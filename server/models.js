@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://new_user:J44rih6CcIVFjmYN@cluster0.eiuf1d9.mongodb.net/?retryWrites=true&w=majority";
 
-//mongoimport --uri  mongodb+srv://new_user:<enter_password>@cluster0.eiuf1d9.mongodb.net/<enter_database_name>  --collection  <enter_collection_name>  --type  <enter JSON/CSV/TSV>   --file  <enter path/to/file>
-mongoose.connect(uri, {
+const MONGO_URI="mongodb+srv://solo:soloProject@cluster0.eiuf1d9.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(MONGO_URI, {
+    // options for the connect method to parse the URI
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    // sets the name of the DB that our collections are part of
     dbName: 'myGameShelf'
-})
-    .then(() => console.log('connected to mongo db.'))
+  })
+    .then(() => console.log('Connected to Mongo DB.'))
     .catch(err => console.log(err));
-
+  
 const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
@@ -22,24 +23,3 @@ const gameSchema = new Schema({
 const Game = mongoose.model('game', gameSchema);
 
 module.exports = Game;
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-// const client = new MongoClient(uri, {
-//   serverApi: {
-//     version: ServerApiVersion.v1,
-//     strict: true,
-//     deprecationErrors: true,
-//   }
-// });
-// async function run() {
-//   try {
-//     // Connect the client to the server	(optional starting in v4.7)
-//     await client.connect();
-//     // Send a ping to confirm a successful connection
-//     await client.db("admin").command({ ping: 1 });
-//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
-//   } finally {
-//     // Ensures that the client will close when you finish/error
-//     await client.close();
-//   }
-// }
-// run().catch(console.dir);

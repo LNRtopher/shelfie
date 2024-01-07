@@ -1,0 +1,9 @@
+* {
+  display: flex;
+  justify-content: center;
+  font-family: 'Century Gothic';
+  margin: 0;
+  padding: 0;
+  color: #efe5e5;
+  background-color: #1f1d1d;
+  }
