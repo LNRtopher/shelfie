@@ -11,11 +11,13 @@ const Display = () => {
     }
     return (
         <div>
-            <h5>find my game</h5>
-        <form onSubmit={findGame}>
-            <input id="game-name" placeholder="title" required/>
-            <input id="game-name" type="submit" value="find"/>
-        </form>
+        <h5>find my game</h5>
+            <p>
+            <form borderRadius="25px" onSubmit={findGame}>
+                <input id="game-name" placeholder="title" required/>
+                <input id="game-name" type="submit" value="find"/>
+             </form>
+            </p>
         </div>
     )
 }

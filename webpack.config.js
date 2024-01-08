@@ -29,9 +29,23 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.s?css/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+            {   test: /\.css$/i,
+                loader: "css-loader",
+                options: {
+                  import: {
+                    filter: (url, media, resourcePath) => {
+                      // resourcePath - path to css file
+        
+                      // Don't handle `style.css` import
+                      if (url.includes("style.css")) {
+                        return false;
+                      }
+        
+                      return true;
+                    }
+                  }     
+                }    //   test: /\.s?css/,
+                // use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.jsx?/,
