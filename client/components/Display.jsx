@@ -10,12 +10,13 @@ const Display = () => {
         .then(jsonData => console.log(jsonData))
     }
     return (
-        <div>
-        <h5>find my game</h5>
+        <div className="displaySearch">
+        
             <p>
-            <form justifyContent="center" borderRadius="25px" onSubmit={findGame}>
-                <input id="game-name" placeholder="title" required/>
-                <input id="game-name" type="submit" value="find"/>
+            <form onSubmit={findGame}>
+                <label>where is that game?</label>
+                <input className="input" id="game-name" placeholder="what's that game called?" required/>
+                <input className="button" id="game-name" type="submit" value="find"/>
              </form>
             </p>
         </div>
