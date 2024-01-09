@@ -4,7 +4,7 @@ import Display from './Display.jsx';
 const App = () => {
     const myStyle = {
         display: "flex",
-        justifyContent: "center",
+        
         fontFamily: "Sans-serif",
         margin: 0,
         padding: 0,

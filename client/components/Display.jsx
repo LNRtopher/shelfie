@@ -13,7 +13,7 @@ const Display = () => {
         <div>
         <h5>find my game</h5>
             <p>
-            <form borderRadius="25px" onSubmit={findGame}>
+            <form justifyContent="center" borderRadius="25px" onSubmit={findGame}>
                 <input id="game-name" placeholder="title" required/>
                 <input id="game-name" type="submit" value="find"/>
              </form>
