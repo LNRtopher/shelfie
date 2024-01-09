@@ -15,7 +15,7 @@ const Display = () => {
             <p>
             <form onSubmit={findGame}>
                 <label>where is that game?</label>
-                <input className="input" id="game-name" placeholder="what's that game called?" required/>
+                <input className="input" id="game-name" placeholder="what's that game called..." required/>
                 <input className="button" id="game-name" type="submit" value="find"/>
              </form>
             </p>

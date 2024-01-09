@@ -5,7 +5,7 @@ const gameController = {};
 gameController.getGame = async(req, res, next) => {
     const name = req.params;
     console.log('myGameShelf', myGameShelf);
-    const game = await myGameShelf.findOne(name).exec();
+    const game = await myGameShelf.find({name: "Skull"}).exec();
    
       console.log(game, 'this is the game from db');
         // if(game.name === name){

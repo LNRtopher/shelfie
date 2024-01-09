@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI="mongodb+srv://solo:soloProject@cluster0.eiuf1d9.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URI="mongodb+srv://solo:benisabeast@cluster0.eiuf1d9.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(MONGO_URI, {
     // options for the connect method to parse the URI
     useNewUrlParser: true,
